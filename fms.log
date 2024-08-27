@@ -1,0 +1,36 @@
+2024-08-27T01:06:15.290+05:30  INFO 21772 --- [fms] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27T01:06:15.326+05:30  INFO 21772 --- [fms] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-27T01:06:15.354+05:30  INFO 21772 --- [fms] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-27T11:50:10.108+05:30  INFO 18900 --- [fms] [restartedMain] com.pjsoft.fms.FmsApplication            : Starting FmsApplication using Java 17.0.11 with PID 18900 (C:\workspace\own workspace\fms\fms\target\classes started by anuverma in C:\workspace\own workspace\fms\fms)
+2024-08-27T11:50:10.112+05:30 DEBUG 18900 --- [fms] [restartedMain] com.pjsoft.fms.FmsApplication            : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27T11:50:10.114+05:30  INFO 18900 --- [fms] [restartedMain] com.pjsoft.fms.FmsApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-08-27T11:50:10.203+05:30  INFO 18900 --- [fms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-27T11:50:10.204+05:30  INFO 18900 --- [fms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-27T11:50:12.062+05:30  INFO 18900 --- [fms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27T11:50:12.213+05:30  INFO 18900 --- [fms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 6 JPA repository interfaces.
+2024-08-27T11:50:13.959+05:30  INFO 18900 --- [fms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-27T11:50:13.977+05:30  INFO 18900 --- [fms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-27T11:50:13.979+05:30  INFO 18900 --- [fms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27T11:50:14.105+05:30  INFO 18900 --- [fms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-27T11:50:14.107+05:30  INFO 18900 --- [fms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3901 ms
+2024-08-27T11:50:14.196+05:30  INFO 18900 --- [fms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-27T11:50:14.923+05:30  INFO 18900 --- [fms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3c4be4c6
+2024-08-27T11:50:14.925+05:30  INFO 18900 --- [fms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-27T11:50:14.946+05:30  INFO 18900 --- [fms] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/postgres'
+2024-08-27T11:50:15.248+05:30 DEBUG 18900 --- [fms] [restartedMain] com.pjsoft.fms.util.JwtRequestFilter     : Filter 'jwtRequestFilter' configured for use
+2024-08-27T11:50:15.464+05:30  INFO 18900 --- [fms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27T11:50:15.619+05:30  INFO 18900 --- [fms] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27T11:50:15.695+05:30  INFO 18900 --- [fms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-27T11:50:17.298+05:30  INFO 18900 --- [fms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27T11:50:17.486+05:30  WARN 18900 --- [fms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27T11:50:19.632+05:30  INFO 18900 --- [fms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27T11:50:19.877+05:30  INFO 18900 --- [fms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27T11:50:20.811+05:30  INFO 18900 --- [fms] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-27T11:50:22.103+05:30  WARN 18900 --- [fms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27T11:50:23.913+05:30  INFO 18900 --- [fms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-27T11:50:24.009+05:30  INFO 18900 --- [fms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-27T11:50:24.033+05:30  INFO 18900 --- [fms] [restartedMain] com.pjsoft.fms.FmsApplication            : Started FmsApplication in 14.805 seconds (process running for 16.689)
+2024-08-27T11:50:30.534+05:30  INFO 18900 --- [fms] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27T11:50:30.535+05:30  INFO 18900 --- [fms] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-27T11:50:30.537+05:30  INFO 18900 --- [fms] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-27T12:43:41.540+05:30  WARN 18900 --- [fms] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m26s428ms758µs500ns).
