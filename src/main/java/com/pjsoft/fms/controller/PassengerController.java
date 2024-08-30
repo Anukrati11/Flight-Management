@@ -1,12 +1,16 @@
 package com.pjsoft.fms.controller;
 
+import com.pjsoft.fms.dto.PassengerBookingFlightDto;
 import com.pjsoft.fms.model.Passenger;
+import com.pjsoft.fms.service.PassengerBookingFlightService;
+import com.pjsoft.fms.service.PassengerBookingService;
 import com.pjsoft.fms.service.PassengerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequestMapping("/api/passenger")
@@ -14,6 +18,12 @@ public class PassengerController {
 
     @Autowired
     private PassengerService passengerService;
+
+    @Autowired
+    private PassengerBookingService passengerBookingService;
+
+    @Autowired
+    private PassengerBookingFlightService passengerBookingFlightService;
 
     // 1. Get All the passengers
     @GetMapping
@@ -59,5 +69,15 @@ public class PassengerController {
 
     @GetMapping("/getConfirmedPassenger")
     public List<Passenger> getConfirmedPassengers(){ return passengerService.getConfirmedPassengers(); }
+
+    @PostMapping("/getPassengerByStatus")
+    public List<Passenger> getPassengerByStatus(@RequestParam(value="status", defaultValue = "Confirmed", required = false)String status) throws ExecutionException {
+        return passengerBookingService.getAllPassengersByBookingStatusAsych(status);
+    }
+
+    @PostMapping("/getAllPassengersFlightsBookings")
+    public PassengerBookingFlightDto getAllPassengersFlightsBookings() throws ExecutionException, InterruptedException {
+        return passengerBookingFlightService.extractAllPassengerBookingFlightDetails();
+    }
 
 }

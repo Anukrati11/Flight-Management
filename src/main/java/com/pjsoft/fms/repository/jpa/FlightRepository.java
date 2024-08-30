@@ -22,8 +22,6 @@ public interface FlightRepository extends JpaRepository<Flight, Long> {
            value = "SELECT max(SEAT_CAPACITY) FROM FLIGHT")
     Integer getMaxSeat();
 
-    // criteria queries
-
 
 
 

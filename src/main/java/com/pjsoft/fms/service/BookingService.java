@@ -1,5 +1,6 @@
 package com.pjsoft.fms.service;
 
+import com.pjsoft.fms.exception.ResourceNotFoundException;
 import com.pjsoft.fms.model.Booking;
 import com.pjsoft.fms.repository.jpa.BookingRepository;
 import org.slf4j.Logger;
@@ -23,11 +24,9 @@ public class BookingService {
 
     // 2. Get booking details by id
     public Booking getBookingById(Long bookingId){
-        // TODO : not able to handle the exception
         logger.debug("Please wait, Searching the booking of given Id!");
-        return bookingRepository.getById(bookingId);
-//        return bookingRepository.getById(bookingId)
-//                .orElseThrow(() -> new ResourceNotFoundException("Booking not founf with id: "+bookingId));
+        return bookingRepository.findById(bookingId)
+                .orElseThrow(() -> new ResourceNotFoundException("Booking not found with id: "+bookingId));
     }
 
     // 3. Save booking details
@@ -45,6 +44,9 @@ public class BookingService {
         bookingRepository.deleteById(bookingId);
     }
 
+    public List<Long> findPassengerIdsByStatus(String status){
+        return bookingRepository.findPassengerIdsByStatus(status);
+    }
 
 
 }
